@@ -59,8 +59,8 @@
 - name: "Generate htpasswd file"
   community.general.htpasswd:
     path: "/vagrant/auth/htpasswd"
-    name: "(( htpasswd.username ))" # user"
-    password: "(( htpasswd.password ))" # password"
+    name: "{{ htpasswd.username }}" # user"
+    password: "{{ htpasswd.password }}" # password"
     crypt_scheme: "bcrypt"
     mode: "0744"
 
