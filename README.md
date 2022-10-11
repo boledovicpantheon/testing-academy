@@ -6,3 +6,17 @@ The purpose of this repository is to create a fully functional virtual enviromen
  - Jenkins with self-update job,
  - ingress with MetalLB(solution for local use of K8s),
  - bash script to automate the start-up process.
+
+---
+### You will need:
+
+###### Hardware:
+
+              | Recommended | Minimum
+------------- | ----------- | ----------- 
+Available RAM | 16 GB       | 8 GB
+CPUs          | 8 cores     | 4 cores
+
+
+
+ - [Vagrant](https://www.vagrantup.com/downloads)
