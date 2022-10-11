@@ -7,6 +7,7 @@ The purpose of this repository is to create a fully functional virtual enviromen
  - ingress with MetalLB(solution for local use of K8s),
  - bash script to automate the start-up process.
 
+
 ## You will need:
 
 #### Hardware:
@@ -20,3 +21,30 @@ CPUs | 8 cores | 4 cores
 
  - [Vagrant](https://www.vagrantup.com/downloads)
  - [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
+
+
+## Running the enviroment
+
+1. Clone this repository to your local machine:
+
+`git clone https://github.com/boledovicpantheon/testing-academy.git` 
+Or just simply download and extract it.
+
+2. From inside the repository, run 
+`vagrant up`
+
+3. Add DNS entry to your local machine with IP 
+`192.168.56.240` 
+and DNS name
+`example.jenkins.com`.
+This way you will be able to access Jenkins controller on your local machine. It runs on port 80, so so need to specify it.
+
+##### Optional:
+
+Private docker registry is accesible only inside cluster, if you want to access it from your local machine also, you need to add IP 
+`192.168.56.11` 
+and DNS name
+`docker.registry.com`.
+Don't forget that docker registry runs on port 5000. 
+
+
