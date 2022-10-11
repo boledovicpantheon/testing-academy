@@ -12,7 +12,7 @@ The purpose of this repository is to create a fully functional virtual enviromen
 
 ###### Hardware:
 
- | Recommended | Minimum
+x | Recommended | Minimum
 ----------- | ----------- | ----------- 
 Available RAM | 16 GB | 8 GB
 CPUs | 8 cores | 4 cores
