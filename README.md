@@ -7,16 +7,16 @@ The purpose of this repository is to create a fully functional virtual enviromen
  - ingress with MetalLB(solution for local use of K8s),
  - bash script to automate the start-up process.
 
----
-### You will need:
+## You will need:
 
-###### Hardware:
+#### Hardware:
 
 x | Recommended | Minimum
 ----------- | ----------- | ----------- 
 Available RAM | 16 GB | 8 GB
 CPUs | 8 cores | 4 cores
 
-###### Software:
+#### Software:
 
  - [Vagrant](https://www.vagrantup.com/downloads)
+ - [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
