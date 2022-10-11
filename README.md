@@ -17,6 +17,6 @@ The purpose of this repository is to create a fully functional virtual enviromen
 Available RAM | 16 GB       | 8 GB
 CPUs          | 8 cores     | 4 cores
 
-
+###### Software:
 
  - [Vagrant](https://www.vagrantup.com/downloads)
