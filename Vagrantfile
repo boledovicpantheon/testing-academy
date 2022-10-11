@@ -3,8 +3,14 @@
 
 IMAGE_NAME = "boledovicpantheon/testing-academy-22.04_LTS" # https://app.vagrantup.com/boledovicpantheon/boxes/testing-academy-22.04_LTS
 IMAGE_VERSION = "0.1.0" 
-N = 2   # number of worker nodes
-M = 1   # number of master nodes
+
+WORKER_COUNT = 2   # number of worker nodes
+WORKER_RAM = 2048
+WORKER_CPUS = 2
+
+MASTER_COUNT = 1   # number of master nodes
+MASTER_RAM = 8192
+MASTER_CPUS = 4
 
 Vagrant.configure("2") do |config|
 
@@ -18,7 +24,7 @@ Vagrant.configure("2") do |config|
   config.vbguest.auto_reboot = true
 
 ###  Worker node(s)
-(1..N).each do |i|
+(1..WORKER_COUNT).each do |i|
   config.vm.define "node-#{i}" do |node|
     node.vm.box = "#{IMAGE_NAME}"
     node.vm.box_version = "#{IMAGE_VERSION}"
@@ -27,15 +33,15 @@ Vagrant.configure("2") do |config|
     node.vm.network "forwarded_port", guest: 22, host: "#{20300 + i}"
 
     node.vm.provider "virtualbox" do |v| 
-      v.memory = 2048
-      v.cpus = 2
+      v.memory = "#{WORKER_RAM}"
+      v.cpus = "#{WORKER_CPUS}"
       v.name = "node-#{i}"
     end
   end
 end
   
 ###  Master node(s)
-  (1..M).each do |i|
+  (1..MASTER_COUNT).each do |i|
     config.vm.define "master-#{i}" do |master|
       master.vm.box = "#{IMAGE_NAME}"
       master.vm.box_version = "#{IMAGE_VERSION}"
@@ -44,8 +50,8 @@ end
       master.vm.network "forwarded_port", guest: 22, host: "#{20200 + i}"
     
       master.vm.provider "virtualbox" do |v| 
-        v.memory = 4096
-        v.cpus = 4
+        v.memory = "#{MASTER_RAM}"
+        v.cpus = "#{MASTER_CPUS}"
         v.name = "master-#{i}"
       end
 
