@@ -22,6 +22,13 @@ CPUs | 8 cores | 4 cores
  - [Vagrant](https://www.vagrantup.com/downloads)
  - [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
 
+ #### Resources
+
+ Here you can find some resources that should help you understand how tools, that I used, work.
+
+ - [What is Kubernetes?](https://youtu.be/cC46cg5FFAM)
+ - [What is Jenkins?](https://youtu.be/2w-_JOK96Uc?t=81) 
+
 ## Download
 
 Clone this repository to your local machine:
@@ -40,6 +47,22 @@ Here you can edit the hardware requirements.
 `*_RAM` = amount of RAM in MB for each of the node,
 `*_CPUS` = number of CPU cores to attach to each node.
 
+```yaml
+# Image configuration - DO NOT CHANGE
+# https://app.vagrantup.com/boledovicpantheon/boxes/testing-academy-22.04_LTS
+IMAGE_NAME = "boledovicpantheon/testing-academy-22.04_LTS" 
+IMAGE_VERSION = "0.1.0" 
+
+# Worker config
+WORKER_COUNT = 2 
+WORKER_RAM = 2048
+WORKER_CPUS = 2
+
+# Master config
+MASTER_COUNT = 1   
+MASTER_RAM = 8192
+MASTER_CPUS = 4
+```
 
 The worker node server as a slave - it will be executing almost all tasks.
 The master node, serves as a control node/plane, thats why it needs more RAM and CPUs. 

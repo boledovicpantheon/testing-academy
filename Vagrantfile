@@ -1,14 +1,18 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-IMAGE_NAME = "boledovicpantheon/testing-academy-22.04_LTS" # https://app.vagrantup.com/boledovicpantheon/boxes/testing-academy-22.04_LTS
+# Image configuration - DO NOT CHANGE
+# https://app.vagrantup.com/boledovicpantheon/boxes/testing-academy-22.04_LTS
+IMAGE_NAME = "boledovicpantheon/testing-academy-22.04_LTS" 
 IMAGE_VERSION = "0.1.0" 
 
-WORKER_COUNT = 2   # number of worker nodes
+# Worker config
+WORKER_COUNT = 2 
 WORKER_RAM = 2048
 WORKER_CPUS = 2
 
-MASTER_COUNT = 1   # number of master nodes
+# Master config
+MASTER_COUNT = 1   
 MASTER_RAM = 8192
 MASTER_CPUS = 4
 
