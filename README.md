@@ -98,7 +98,7 @@ As this project is for testing purposes only, we use the same username and passw
 
 > Start-up should take no longer than 30 minutes, but it depends on your hardware capacity and internet connection.
 
-1. Create public Github(or alternative) repository and replace the url in `$(project_dir)/jenkins/jobs/update-job.yaml`. Make sure branch is correct too.
+1. Create public Github(or alternative) repository and replace the url in `$(project_dir)/jenkins/jobs/update-job.yaml`. Make sure branches are correct too.
 
 ```yaml
     scm:
