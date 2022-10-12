@@ -23,6 +23,14 @@ CPUs | 8 cores | 4 cores
  - [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
 
 
+## Configuration
+
+You can configure couple of things, to better suite your needs.
+
+TODO
+
+
+
 ## Running the enviroment
 
 1. Clone this repository to your local machine:
@@ -36,11 +44,16 @@ Or just simply download and extract it.
 3. Add DNS entry to your local machine with IP `192.168.56.240` and DNS name`example.jenkins.com`.
 This way you will be able to access Jenkins controller on your local machine. It runs on port 80, so so need to specify it.
 
-##### Optional:
+#### Optional:
 
 4. Private docker registry is accesible only inside cluster, if you want to access it from your local machine also, you need to add IP 
 `192.168.56.11` and DNS name `docker.registry.com` to your `/etc/hosts`, or alternative.
 Don't forget that docker registry runs on port 5000. 
 
 
+### Start-up should take no longer than 30 minutes, but it depends on your hardware capacity.
 
+After successfull startup, you will have: 
+
+
+TODO
