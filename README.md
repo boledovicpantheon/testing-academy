@@ -33,7 +33,7 @@ CPUs | 8 cores | 4 cores
 
 ##### 1. Vagrantfile
 
-Here you can edit the hardware requirements.   
+Here you can edit the hardware requirements. On top of the Vagrantfile you can see couple of variables:
 
 `*_NODES` = number of nodes to create,
 
