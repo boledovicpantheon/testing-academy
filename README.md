@@ -44,7 +44,7 @@ This way you will be able to access Jenkins controller on your local machine. It
 4. Private docker registry is accesible only inside cluster, if you want to access it from your local machine also, you need to add IP 
 `192.168.56.11` 
 and DNS name
-`docker.registry.com`.
+`docker.registry.com`to your `/etc/hosts`, or alternative.
 Don't forget that docker registry runs on port 5000. 
 
 
