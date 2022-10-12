@@ -33,7 +33,7 @@ CPUs | 8 cores | 4 cores
 
 ## Configuration
 
-#### 1. Vagrantfile
+### 1. Vagrantfile
 
 Here you can edit the hardware requirements. On top of the Vagrantfile you can see couple of variables:
 
@@ -62,11 +62,11 @@ MASTER_CPUS = 4
 
 The worker node serves as a slave - it will be executing almost all tasks.
 
-The master node, serves as a control node, thats why it needs more RAM and CPUs. 
+The master node serves as a control node, thats why it needs more RAM and CPUs. 
 
 If you changed the number of worker nodes, you also need to add an entry in `${project_dir}/ansible/inventory/hosts.yaml`. 
 
-#### 2. IP adresses
+### 2. IP adresses
 
 > You can change them, but is not recommended. 
 
@@ -85,19 +85,19 @@ DNS | IP address | Port
 example.jenkins.com | 192.168.56.240 | 80
 docker.registry.com | 192.168.56.11 | 5000
 
-#### 3. Passwords
+### 3. Passwords
 
 As this project is for testing purposes only, we use the same username and password everywhere.
 
-Username: *user*
+**Username:** *user*
 
-Password : *password*
+**Password :** *password*
 
 ## Running the enviroment
 
 > Start-up should take no longer than 30 minutes, but it depends on your hardware capacity and internet connection.
 
-1. Clone this repository to your local machine:
+1. Clone repository to your local machine:
 
 `git clone https://github.com/boledovicpantheon/testing-academy.git` 
 
@@ -110,7 +110,7 @@ This way you will be able to access Jenkins controller on your local machine. It
 #### Optional:
 
 Private docker registry is accesible only inside cluster, if you want to access it from your local machine also, you need to add IP 
-`192.168.56.11` and DNS name `docker.registry.com` to your `/etc/hosts`, or alternative.
-Don't forget that docker registry runs on port 5000. 
+`192.168.56.11` and DNS name `docker.registry.com` to your DNS records.
+Don't forget that docker registry runs on port 5000! 
 
 
