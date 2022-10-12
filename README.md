@@ -62,7 +62,7 @@ The worker node serves as a slave - it will be executing almost all tasks.
 
 The master node, serves as a control node, thats why it needs more RAM and CPUs. 
 
-If you changed the number of worker nodes, you also need to add an entry in `ansible/inventory/hosts.yaml`. 
+If you changed the number of worker nodes, you also need to add an entry in `${project_dir}/ansible/inventory/hosts.yaml`. 
 
 
 ## Running the enviroment
@@ -74,19 +74,20 @@ If you changed the number of worker nodes, you also need to add an entry in `ans
 
 2. From inside the repository, run `vagrant up`
 
-3. Add DNS entry to your local machine with IP `192.168.56.240` and DNS name`example.jenkins.com`.
-This way you will be able to access Jenkins controller on your local machine. It runs on port 80, so so need to specify it.
+3. Add DNS entry to your local machine with IP `192.168.56.240` and DNS name `example.jenkins.com`.
+This way you will be able to access Jenkins controller on your local machine. It runs on port 80, so no need to specify it.
 
 #### Optional:
 
-4. Private docker registry is accesible only inside cluster, if you want to access it from your local machine also, you need to add IP 
+Private docker registry is accesible only inside cluster, if you want to access it from your local machine also, you need to add IP 
 `192.168.56.11` and DNS name `docker.registry.com` to your `/etc/hosts`, or alternative.
 Don't forget that docker registry runs on port 5000. 
 
 
-### Start-up should take no longer than 30 minutes, but it depends on your hardware capacity.
+> **Start-up should take no longer than 30 minutes, but it depends on your hardware capacity.**
 
-After successfull startup, you will have: 
+
+### After successfull startup, you will have: 
 
 
 TODO
