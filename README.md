@@ -22,21 +22,31 @@ CPUs | 8 cores | 4 cores
  - [Vagrant](https://www.vagrantup.com/downloads)
  - [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
 
+## Download
 
-## Configuration
-
-You can configure couple of things, to better suite your needs.
-
-TODO
-
-
-
-## Running the enviroment
-
-1. Clone this repository to your local machine:
+Clone this repository to your local machine:
 
 `git clone https://github.com/boledovicpantheon/testing-academy.git` 
 Or just simply download and extract it.
+
+
+## Configuration
+
+##### 1. Vagrantfile
+
+Here you can edit the hardware requirements.   
+
+`*_NODES` = number of nodes to create,
+`*_RAM` = amount of RAM in MB for each of the node,
+`*_CPUS` = number of CPU cores to attach to each node.
+
+
+The worker node server as a slave - it will be executing almost all tasks.
+The master node, serves as a control node/plane, thats why it needs more RAM and CPUs. 
+
+## Running the enviroment
+
+
 
 2. From inside the repository, run 
 `vagrant up`
