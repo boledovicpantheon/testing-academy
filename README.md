@@ -29,19 +29,19 @@ CPUs | 8 cores | 4 cores
  - [What is Kubernetes?](https://youtu.be/cC46cg5FFAM)
  - [What is Jenkins?](https://youtu.be/2w-_JOK96Uc?t=81) 
  - [What is Ansible?](https://youtu.be/fHO1X93e4WA)
- - [Ansible Vault](https://docs.ansible.com/ansible/latest/cli/ansible-vault.html)
+
 
 ## Configuration
 
 ### 1. Vagrantfile
 
-Here you can edit the hardware requirements. On top of the Vagrantfile you can see couple of variables:
+Here you can edit the HW requirements. Inside the Vagrantfile you can see couple of variables:
 
-`_NODES` = number of nodes to create,
+`*_NODES` = number of nodes to create,
 
-`_RAM` = amount of RAM in MB for each of the node,
+`*_RAM` = amount of RAM in MB for each of the node,
 
-`_CPUS` = number of CPU cores to attach to each node.
+`*_CPUS` = number of CPU cores to attach to each node.
 
 ```yaml
 # Image configuration - DO NOT CHANGE
@@ -78,7 +78,7 @@ node-1 | 192.168.56.101
 node-2 | 192.168.56.102
 master-1 | 192.168.56.11 
 
-These ones are automatically configured in K8s cluster, if you want to access them on local machine, follow steps below.
+These one's are automatically configured in K8s cluster, if you want to access them on local machine, follow steps in section "Running the enviroment".
 
 DNS | IP address | Port
 --- | --- | ---
@@ -97,9 +97,7 @@ As this project is for testing purposes only, we use the same username and passw
 
 > Start-up should take no longer than 30 minutes, but it depends on your hardware capacity and internet connection.
 
-1. Clone repository to your local machine:
-
-`git clone https://github.com/boledovicpantheon/testing-academy.git` 
+1. Clone repository to your local machine: `git clone https://github.com/boledovicpantheon/testing-academy.git` 
 
 
 2. From inside the repository on your terminal, run `vagrant up`
