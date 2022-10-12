@@ -1,18 +1,18 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-# Image configuration - DO NOT CHANGE
+## Image configuration - DO NOT CHANGE
 # https://app.vagrantup.com/boledovicpantheon/boxes/testing-academy-22.04_LTS
 IMAGE_NAME = "boledovicpantheon/testing-academy-22.04_LTS" 
 IMAGE_VERSION = "0.1.0" 
 
 # Worker config
-WORKER_COUNT = 2 
+WORKER_COUNT = 2 # Do not change unless you need to
 WORKER_RAM = 2048
 WORKER_CPUS = 2
 
 # Master config
-MASTER_COUNT = 1   
+MASTER_COUNT = 1 # DO NOT CHANGE
 MASTER_RAM = 8192
 MASTER_CPUS = 4
 
