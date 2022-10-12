@@ -98,7 +98,7 @@ As this project is for testing purposes only, we use the same username and passw
 
 > Start-up should take no longer than 30 minutes, but it depends on your hardware capacity and internet connection.
 
-1. Create public Github(or alternative) repository and replace the url in `$(project_dir)/jenkins/jobs/update-job.yaml`. Make sure branch that you selected exists.
+1. Create public Github(or alternative) repository and replace the url in `$(project_dir)/jenkins/jobs/update-job.yaml`. Make sure branch is correct too.
 
 ```yaml
     scm:
@@ -109,12 +109,13 @@ As this project is for testing purposes only, we use the same username and passw
           basedir: jobs
 ```
 
-1. Clone repository to your local machine: `git clone https://github.com/boledovicpantheon/testing-academy.git` 
+
+2. Clone repository to your local machine: `git clone https://github.com/boledovicpantheon/testing-academy.git` 
 
 
-2. From inside the repository on your terminal, run `vagrant up`
+3. From inside the repository on your terminal, run `vagrant up`
 
-3. Add DNS entry to your local machine with IP `192.168.56.240` and DNS name `example.jenkins.com`.
+4. Add DNS entry to your local machine with IP `192.168.56.240` and DNS name `example.jenkins.com`.
 This way you will be able to access Jenkins controller on your local machine. It runs on port 80, so no need to specify it.
 
 #### Optional:
