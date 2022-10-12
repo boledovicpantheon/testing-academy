@@ -29,14 +29,6 @@ CPUs | 8 cores | 4 cores
  - [What is Kubernetes?](https://youtu.be/cC46cg5FFAM)
  - [What is Jenkins?](https://youtu.be/2w-_JOK96Uc?t=81) 
 
-## Download
-
-Clone this repository to your local machine:
-
-`git clone https://github.com/boledovicpantheon/testing-academy.git` 
-Or just simply download and extract it.
-
-
 ## Configuration
 
 ##### 1. Vagrantfile
@@ -44,7 +36,9 @@ Or just simply download and extract it.
 Here you can edit the hardware requirements.   
 
 `*_NODES` = number of nodes to create,
+
 `*_RAM` = amount of RAM in MB for each of the node,
+
 `*_CPUS` = number of CPU cores to attach to each node.
 
 ```yaml
@@ -65,14 +59,17 @@ MASTER_CPUS = 4
 ```
 
 The worker node server as a slave - it will be executing almost all tasks.
-The master node, serves as a control node/plane, thats why it needs more RAM and CPUs. 
+
+The master node, serves as a control node, thats why it needs more RAM and CPUs. 
 
 ## Running the enviroment
 
+1. Clone this repository to your local machine:
+
+`git clone https://github.com/boledovicpantheon/testing-academy.git` 
 
 
-2. From inside the repository, run 
-`vagrant up`
+2. From inside the repository, run `vagrant up`
 
 3. Add DNS entry to your local machine with IP `192.168.56.240` and DNS name`example.jenkins.com`.
 This way you will be able to access Jenkins controller on your local machine. It runs on port 80, so so need to specify it.
