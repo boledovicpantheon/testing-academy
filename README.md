@@ -21,6 +21,7 @@ CPUs | 8 cores | 4 cores
 
  - [Vagrant](https://www.vagrantup.com/downloads)
  - [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
+ - Github repository where you will be uploading jobs
 
  #### Resources
 
@@ -96,6 +97,17 @@ As this project is for testing purposes only, we use the same username and passw
 ## Running the enviroment
 
 > Start-up should take no longer than 30 minutes, but it depends on your hardware capacity and internet connection.
+
+1. Create public Github(or alternative) repository and replace the url in `$(project_dir)/jenkins/jobs/update-job.yaml`. Make sure branch that you selected exists.
+
+```yaml
+    scm:
+      - git:
+          url: "https://github.com/boledovicpantheon/jenkins-job-definitions.git"
+          branches:
+            - origin/main
+          basedir: jobs
+```
 
 1. Clone repository to your local machine: `git clone https://github.com/boledovicpantheon/testing-academy.git` 
 

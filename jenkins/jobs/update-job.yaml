@@ -15,7 +15,7 @@
           url: "https://github.com/boledovicpantheon/jenkins-job-definitions.git"
           branches:
             - origin/main
-          basedir: jjb-definitions
+          basedir: jobs
 
     triggers:
       - pollscm: "* * * * *"
@@ -29,9 +29,9 @@
           password=admin-password 
           url=http://jenkins:80      
           EOF
-          /usr/local/bin/jenkins-jobs --conf $WORKSPACE/config.ini --ignore-cache test $WORKSPACE/jjb-definitions/
+          /usr/local/bin/jenkins-jobs --conf $WORKSPACE/config.ini --ignore-cache test $WORKSPACE/jobs/
           if [ $? == 0 ]
           then 
           echo "Test is OK-------------------------------"
-          /usr/local/bin/jenkins-jobs --conf $WORKSPACE/config.ini --ignore-cache update $WORKSPACE/jjb-definitions/
+          /usr/local/bin/jenkins-jobs --conf $WORKSPACE/config.ini --ignore-cache update $WORKSPACE/jobs/
           fi
