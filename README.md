@@ -99,7 +99,8 @@ As this project is for testing purposes only, we use the same username and passw
 
 > Provisioning should not be longer than 30 minutes, but it depends on your hardware capacity and internet connection.
 
-1. Create public Github(or alternative) repository and replace the url in `$(project_dir)/jenkins/jobs/update-job.yaml`. Make sure branches are  correct too.
+1. Create public Github(or alternative) repository and replace the url in `$(project_dir)/jenkins/jobs/update-job.yaml`. Make sure branches are  correct too. 
+When you change or upload file to this repository, Jenkins will detect change, build and push jobs to Jenkins controller.
 
 ```yaml
     scm:
