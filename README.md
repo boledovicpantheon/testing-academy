@@ -113,7 +113,6 @@ As this project is for testing purposes only, we use the same username and passw
 
 2. Clone repository to your local machine: `git clone https://github.com/boledovicpantheon/testing-academy.git` 
 
-
 3. From inside the repository on your terminal, run `vagrant up`
 
 4. Add DNS entry to your local machine with IP `192.168.56.240` and DNS name `example.jenkins.com`.
@@ -124,5 +123,3 @@ This way you will be able to access Jenkins controller on your local machine. It
 Private docker registry is accesible only inside cluster, if you want to access it from your local machine also, you need to add IP 
 `192.168.56.11` and DNS name `docker.registry.com` to your DNS records.
 Don't forget that docker registry runs on port 5000! 
-
-
