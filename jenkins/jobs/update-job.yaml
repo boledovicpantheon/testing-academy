@@ -25,8 +25,8 @@
           #!/bin/bash -ex
           cat > $WORKSPACE/config.ini << EOF 
           [jenkins] 
-          user=admin 
-          password=admin-password 
+          user=user 
+          password=password 
           url=http://jenkins:80      
           EOF
           /usr/local/bin/jenkins-jobs --conf $WORKSPACE/config.ini --ignore-cache test $WORKSPACE/jobs/
