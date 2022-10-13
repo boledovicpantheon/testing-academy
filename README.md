@@ -7,6 +7,7 @@ The purpose of this repository is to create a fully functional virtual enviromen
  - ingress with MetalLB(solution for local use of K8s),
  - bash script to automate the start-up process.
 
+We use Vagrant to manage VirtualBox virtual machines and Ansible to provision them. 
 
 ## You will need:
 
@@ -20,7 +21,7 @@ CPUs | 8 cores | 4 cores
 #### Software:
 
  - [Vagrant](https://www.vagrantup.com/downloads)
- - [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
+ - [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
  - Github repository where you will be uploading jobs
 
  #### Resources
@@ -79,7 +80,7 @@ node-1 | 192.168.56.101
 node-2 | 192.168.56.102
 master-1 | 192.168.56.11 
 
-These one's are automatically configured in K8s cluster, if you want to access them on local machine, follow steps in section "Running the enviroment".
+These ones are automatically configured in K8s cluster, if you want to access them on local machine, follow steps in section "Running the enviroment".
 
 DNS | IP address | Port
 --- | --- | ---
@@ -96,9 +97,9 @@ As this project is for testing purposes only, we use the same username and passw
 
 ## Running the enviroment
 
-> Start-up should take no longer than 30 minutes, but it depends on your hardware capacity and internet connection.
+> Provisioning should not be longer than 30 minutes, but it depends on your hardware capacity and internet connection.
 
-1. Create public Github(or alternative) repository and replace the url in `$(project_dir)/jenkins/jobs/update-job.yaml`. Make sure branches are correct too.
+1. Create public Github(or alternative) repository and replace the url in `$(project_dir)/jenkins/jobs/update-job.yaml`. Make sure branches are  correct too.
 
 ```yaml
     scm:
