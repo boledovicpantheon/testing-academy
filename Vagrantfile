@@ -40,6 +40,7 @@ Vagrant.configure("2") do |config|
       v.memory = "#{WORKER_RAM}"
       v.cpus = "#{WORKER_CPUS}"
       v.name = "node-#{i}"
+      v.customize ["modifyvm", :id, "--nested-hw-virt", "on"]
     end
   end
 end
@@ -57,6 +58,7 @@ end
         v.memory = "#{MASTER_RAM}"
         v.cpus = "#{MASTER_CPUS}"
         v.name = "master-#{i}"
+        v.customize ["modifyvm", :id, "--nested-hw-virt", "on"]
       end
 
       master.vm.provision "ansible_local" do |ansible|
@@ -65,9 +67,9 @@ end
         ansible.verbose = "true" # same as `-v`
         ansible.become = "true" #sudo
         ansible.limit = "all"
-        ansible.inventory_path = "ansible/inventory/"
-        ansible.config_file = "ansible/ansible.cfg"
-        ansible.raw_arguments = ["--vault-pass-file=/vagrant/ansible/vault/secret"]
+        ansible.inventory_path = "ansible/inventory/hosts.yaml"
+        ansible.config_file = "ansible/inventory/ansible.cfg"
+        # ansible.raw_arguments = ["--vault-pass-file=/vagrant/ansible/vault/secret"]
       end
     end
   end
