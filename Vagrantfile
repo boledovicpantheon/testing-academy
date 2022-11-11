@@ -27,6 +27,10 @@ Vagrant.configure("2") do |config|
   config.vbguest.no_remote = true
   config.vbguest.auto_reboot = true
 
+  config.vm.synced_folder "./", "/vagrant",
+     owner: "vagrant",
+     mount_options: ["dmode=775,fmode=600"]
+
 ###  Worker node(s)
 (1..WORKER_COUNT).each do |i|
   config.vm.define "node-#{i}" do |node|
